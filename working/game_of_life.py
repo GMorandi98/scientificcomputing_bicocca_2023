@@ -29,33 +29,33 @@ def update_state(frames, img, state, N):
 
 
 ### Intializing grid and starting cnfg ###
-N = 30
+N = 40
 n_step = 50
 state = np.zeros((N, N), dtype=int)
 ##########################################
 
-### Random initial state 
-state = np.random.randint(0, 2, size=(N,N))
+# ### Random initial state 
+# state = np.random.randint(0, 2, size=(N,N))
 
-# ### Personalized initial state ###
-# state[1, 1:3] = [1, 1]
-# state[2, 1:3] = [1, 1]
-# state[1, 15:17] = [1, 1]
-# state[2, 15:17] = [1, 1]  # these are 2x2 block that live forever
+### Personalized initial state ###
+state[1, 1:3] = [1, 1]
+state[2, 1:3] = [1, 1]
+state[1, 15:17] = [1, 1]
+state[2, 15:17] = [1, 1]  # these are 2x2 block that live forever
 
-# state[5, 10] = 1
-# state[6, 10] = 1
-# state[7, 10] = 1
-# state[7, 22] = 1
-# state[8, 22] = 1
-# state[9, 22] = 1
-# state[13, 10:13] = [1, 1, 1]
-# state[14,  9:12] = [1, 1, 1]  # these are different types of oscillators
+state[5, 10] = 1
+state[6, 10] = 1
+state[7, 10] = 1
+state[7, 22] = 1
+state[8, 22] = 1
+state[9, 22] = 1
+state[13, 10:13] = [1, 1, 1]
+state[14,  9:12] = [1, 1, 1]  # these are different types of oscillators
 
-# state[7, 19]    = 1
-# state[8, 20:22] = [1, 1]
-# state[9, 19:21] = [1, 1]
-# ##################################
+state[7, 19]    = 1
+state[8, 20:22] = [1, 1]
+state[9, 19:21] = [1, 1]
+##################################
 
 
 ### animation settings ###
